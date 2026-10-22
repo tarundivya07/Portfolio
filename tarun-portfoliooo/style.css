@@ -36,7 +36,8 @@ a {
     text-transform: capitalize;
     font-size: 1.4rem;
     font-family: var(--main-font);
-
+    -webkit-tap-highlight-color: transparent;
+    
 }
 
 li {
@@ -146,7 +147,7 @@ header {
     position: relative;
 
     &::before {
-        background-image: linear-gradient(to left, var(--dark-blue-color) 40%, rgba(0, 0, 0, 0.267)), url(/imgs/hero-bg.jpg);
+        background-image: linear-gradient(to left, var(--dark-blue-color) 40%, rgba(0, 0, 0, 0.267)), url(imgs/hero-bg.jpg);
         background-position: top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -200,13 +201,19 @@ header {
 
         & li a {
             color: var(--white);
-            font-family: sans-serif;
+            /* font-family: sans-serif;
+             */
+             width: fit-content;
+             height: fit-content;
             transition: 0.3s;
             border: 1px solid rgba(255, 255, 255, 0);
             padding: 0.8rem 1.6rem;
             border-radius: 100px;
             display: inline-block;
-
+& svg{
+    width: 2.4rem;
+    height: 2.4rem;
+}
             &:hover {
                 border: 1px solid white;
                 backdrop-filter: blur(15px);
@@ -501,6 +508,10 @@ margin: 10rem auto;
                     display: inline-block;
                     color: var(--highlight-color);
                     margin-top: 1.5rem;
+transition: .2s;
+                    &:hover{
+                      filter:brightness(.7);
+                    }
                 }
             }
         }
